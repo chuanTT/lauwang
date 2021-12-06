@@ -1,0 +1,66 @@
+/* .check-order {
+
+} */
+
+.check-order > h2 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.order {
+    width: fit-content;
+}
+.order > input {
+    width: 50px;
+    display: block;
+    text-align: center;
+    border: none;
+    user-select: none;
+}
+
+
+.form-left {
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.check > input {
+    cursor: pointer;
+}
+.check > label {
+    cursor: pointer;
+}
+
+.form-left > span,
+.form-left > .check{
+    white-space: nowrap;
+}
+
+.form-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add__table {
+    justify-content: space-between;
+}
+
+.add_table-left,.add_table-right {
+    flex: 1;
+    padding: 20px;
+}
+.add_table-right {
+    border-left: 0.5px solid #333;
+}
+
+.add_table-left {
+    border-right: 0.5px solid #333;
+}
+
+

@@ -1,0 +1,97 @@
+/* .news {
+
+    
+}
+
+.news {
+
+} */
+
+.news-group {
+    justify-content: space-between;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group > input {
+     width: 600px;
+     height: 40px;
+     padding: 15px;
+}
+
+.form-group > input[name='Name'] {
+    width: 840px;
+}
+
+.form-group > input[name='Price']  {
+    width: 370px;
+}
+
+.news textarea {
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+#fileMenu,#fileNews {
+    position: absolute;
+    inset: 0;
+    /* z-index: 900; */
+}
+
+.form-group label i {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.newsForm {
+    white-space: nowrap;
+}
+
+.typeNews {
+    width: 50px;
+}
+
+#newsLoai {
+    width: 272px;
+}
+
+#newsKey {
+    width: 317px;
+}
+
+#newsShort {
+    padding: 20px;
+    height: 200px;
+    outline: none;
+}
+
+
+.note-editable {
+    padding: 10px !important;
+}
+
+.modal {
+    z-index: 99999999;
+}
+
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+}
+
+.modal-body > .form-group > input  {
+    width: 572px;
+}
