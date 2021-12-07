@@ -35,7 +35,7 @@ endswitch;
 <html lang="en">
 
 <head>
-    <base href="https://lauwang.herokuapp.com/" />
+    <base href="http://localhost/LauWangNew/" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,11 +45,7 @@ endswitch;
     <link rel="icon" href="https://lauwang.vn/wp-content/uploads/2020/07/cropped-gg-192x192.png" sizes="192x192">
     <title><?php echo isset($title) ? $title : 'Lẩu Wang - Vua Buffet Lẩu - Hệ Thống Chuỗi Nhà Hàng Buffet Hà Nội' ?></title>
 </head>
-<style>
-    @media screen and (max-width: 1278px){
-        
-    }
-</style>
+
 <body>
     <!-- header -->
     <div class="header">

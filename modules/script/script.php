@@ -36,13 +36,6 @@
                             slideToShow: 1,
                             slideToScroll: 1,
                         }
-                    },
-                    {
-                        breakpoint: 1282,
-                        settings: {
-                            slideToShow: 2,
-                            slideToScroll: 1,
-                        }
                     }
                 ]
             })

@@ -70,7 +70,7 @@
                     </div>
             <?php endforeach;
              else : ?>
-                <span style="font-size: 30px">Your search <span style="color: #ef5122">"<?=isset($search)?$search:false?>"</span>: 0 results</span>
+                <span style="font-size: 30px">Your search <span style="color: #ef5122; font-size: 25px;">"<?=isset($search)?$search:false?>"</span>: 0 results</span>
             <?php endif;
         endif;
         ?>
@@ -83,9 +83,11 @@
             if($total > 1):
             ?>
             <ul class="has-next">
-                <?php if($page > 1):?>
+                <?php if($page > 1):
+                        $back = $page - 1;
+                    ?>
                     <li>
-                        <a href="?action=endow&page=<?=$page?>&status=back">
+                        <a href="?action=endow&page=<?=$back?>">
                             <i class="fas fa-chevron-left"></i>
                         </a>
                     </li>
@@ -96,9 +98,11 @@
                     </li>
                 <?php endfor;?>
 
-                <?php if($page < $total - 1):?>
+                <?php if($page < $total - 1):
+                    $next = $page + 1;
+                ?>
                 <li>
-                    <a href="?action=endow&page=<?=$page?>&status=next">
+                    <a href="?action=endow&page=<?=$next?>">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </li>
