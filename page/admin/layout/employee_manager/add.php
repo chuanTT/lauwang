@@ -44,7 +44,7 @@
             $result = connect($sql);
 
             if($result == true) {
-                $fullName = $birtday = $phone = $address = $password = $user = $gender = '';
+                $fullName = $birtday = $phone = $address = $password = $user = $gender = $confirmPassword = '';
             }
 
             unset($_POST);
