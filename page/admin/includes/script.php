@@ -105,9 +105,9 @@
         return $result;
     }
 
-    window.onload = function () {
-        if(jQuery('.error__mesage')) {
-            jQuery('html').style.overflow = 'hidden';
-        }
-    }
+    // window.onload = function () {
+    //     if(jQuery('.error__mesage')) {
+    //         jQuery('html').style.overflow = 'hidden';
+    //     }
+    // }
 </script>

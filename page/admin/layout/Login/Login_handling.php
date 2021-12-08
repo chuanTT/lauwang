@@ -26,7 +26,8 @@
             if($result != null) {
                 $msErorr['action']['erorr'] = 'Tài khoản đã bị vô hiệu hóa';
             } else {
-                $sql = "SELECT * FROM nhanvien WHERE userName='$user' and MatKhau = '$pwd'";
+                $sql = "SELECT * FROM nhanvien WHERE nhanvien.userName='$user' and nhanvien.MatKhau = '$pwd'";
+
                 $result = renderViews ($sql,true);
     
                 if($result != null) {

@@ -17,6 +17,26 @@
     <link rel="stylesheet" href="../../css/formLogin.css">
     <title>Đăng nhập | Lẩu wang</title>
 </head>
+
+<style>
+    @media screen  and (max-width: 758px){
+        html {
+            overflow-x: none;
+        }
+        .main {
+            width: 100%;
+        }
+
+        .container {
+            flex-direction: column;
+            width: 100%;
+            border: none;
+            margin-top: 0;
+            padding-bottom: 50px;
+            height: 100%;
+        }
+    }
+</style>
 <body>
     <div class="main">
         <div class="container dflexCenter mainCenter">

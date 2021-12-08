@@ -122,48 +122,50 @@
             <a href="?status=News_management" class="colorWhite">Hiển Thị Tin Tức</a>
         </button>
     </div>
-    <div class="news-group dflexCenter margin-bottom-20">
-        <div class="form-group news">
+    <div class="news-group dflexCenter margin-bottom-20 mobile-app">
+        <div class="form-group news" style="flex: 1;">
             <span>Tiêu Đề</span>
             <input type="text" name="TitleNews" id="newsName" placeholder=" " value="<?=isset($TitleNews)?$TitleNews:false?>">
         </div>
-        <div class="form-group news" style="margin: 0 30px;">
-            <span>Loại</span>
-            <select name="typeNews" id="">
-                <?php 
-                    $sql = "SELECT * FROM kind_of_news";
-                    $result = renderViews($sql);
-                    foreach($result as $item) :?>
-                        <option value="<?=$item['ID']?>" 
-                        <?php
-                            if(isset($type)) {
-                                if($type == $item['ID']) {
-                                    echo 'selected';
+        <div class="dflexCenter mobile__width100" style="flex: 1;">
+            <div class="form-group news mobileMG" style="margin: 0 30px;">
+                <span>Loại</span>
+                <select name="typeNews" id="">
+                    <?php 
+                        $sql = "SELECT * FROM kind_of_news";
+                        $result = renderViews($sql);
+                        foreach($result as $item) :?>
+                            <option value="<?=$item['ID']?>" 
+                            <?php
+                                if(isset($type)) {
+                                    if($type == $item['ID']) {
+                                        echo 'selected';
+                                    }
                                 }
-                            }
-                        ?>><?=$item['nameNews']?></option>
-                <?php endforeach;?>
-
-            </select>
-        </div>
-        <div class="form-group news" style="margin: 0 30px;">
-            <span>Từ khóa</span>
-            <select name="keyWord" id="">
-                <?php 
-                    $sql = "SELECT * FROM related_keywords";
-                    $result = renderViews($sql);
-                    foreach($result as $item) :?>
-                        <option value="<?=$item['ID']?>"
-                        <?php
-                            if(isset($keyWord)) {
-                                if($keyWord == $item['ID']) {
-                                    echo 'selected';
+                            ?>><?=$item['nameNews']?></option>
+                    <?php endforeach;?>
+    
+                </select>
+            </div>
+            <div class="form-group news mobileMG mbMR-left10" style="margin: 0 30px;">
+                <span>Từ khóa</span>
+                <select name="keyWord" id="">
+                    <?php 
+                        $sql = "SELECT * FROM related_keywords";
+                        $result = renderViews($sql);
+                        foreach($result as $item) :?>
+                            <option value="<?=$item['ID']?>"
+                            <?php
+                                if(isset($keyWord)) {
+                                    if($keyWord == $item['ID']) {
+                                        echo 'selected';
+                                    }
                                 }
-                            }
-                        ?>><?=$item['key_word']?></option>
-                <?php endforeach;?>
-
-            </select>
+                            ?>><?=$item['key_word']?></option>
+                    <?php endforeach;?>
+    
+                </select>
+            </div>
         </div>
     </div>
     <div class="form-group news margin-bottom-40">

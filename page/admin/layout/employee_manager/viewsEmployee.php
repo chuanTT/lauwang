@@ -15,8 +15,8 @@
                 <th>Hình Ảnh</th>
                 <th>Họ Và Tên</th>
                 <th>Ngày Sinh</th>
-                <th>Số Điện Thoại</th>
-                <th>Địa Chỉ</th>
+                <th class='mobile__item'>Số Điện Thoại</th>
+                <th class='mobile__item'>Địa Chỉ</th>
                 <th>Chức Vụ</th>
             </tr>
         </thead>
@@ -29,19 +29,19 @@
                 $birtday = date_format($date,'d/m/Y');
             ?>
             <tr>
-                <td style="width: 200px; padding: 5px;">
-                    <img width="200" src="<?=BASEURL.$item['avatar']?>" alt="">
+                <td class="mbWidth100" style="width: 200px; padding: 5px;">
+                    <img class="mbWidth100" width="200" src="<?=BASEURL.$item['avatar']?>" alt="">
                 </td>
                 <td><?=$item['HoTen']?></td>
                 <td><?=$birtday?></td>
-                <td><?=$item['SDT']?></td>
-                <td><?=$item['DiaChi']?></td>
+                <td class='mobile__item'><?=$item['SDT']?></td>
+                <td class='mobile__item'><?=$item['DiaChi']?></td>
                 <td><?=$item['nameRole']?></td>
                 <td>
-                    <form method="post" class="dflexCenter" style="width: 100%; justify-content: center;" onsubmit="return Check()">
+                    <form method="post" class="dflexCenter mobile-app" style="width: 100%; justify-content: center;" onsubmit="return Check()">
                         <input type="hidden" name="userProfile" value="<?=$item['id']?>">
                         <a href="?status=profile&profile=<?=$item['userName']?>" class="btn btn-infor btn-sizeL rounded colorWhite" name="viewsProfile">Xem Thông Tin</a>
-                        <input type="submit" class="btn btn-erorr btn-sizeL rounded colorWhite" name="<?=$item['deleted']==0?'disableProfile':'remove'?>" value="<?=$item['deleted']==0?'Vô Hiệu Hóa':'Đã Vô Hiệu'?>" style="margin-left: 10px;" id="node">
+                        <input type="submit" class="btn btn-erorr btn-sizeL rounded colorWhite mobileMTop-10" name="<?=$item['deleted']==0?'disableProfile':'remove'?>" value="<?=$item['deleted']==0?'Vô Hiệu Hóa':'Đã Vô Hiệu'?>" style="margin-left: 10px;" id="node">
                     </form>
                 </td>
             </tr>

@@ -29,8 +29,8 @@
             <th>Hình ảnh đại diện</th>
             <th>Tiêu đề</th>
             <th>Người đăng</th>
-            <th>Loại</th>
-            <th>Từ khóa</th>
+            <th class="mobile__item">Loại</th>
+            <th class="mobile__item">Từ khóa</th>
             <th>Thời gian đăng</th>
         </tr>
         <?php 
@@ -46,13 +46,13 @@
                     <td>'.$item['title'].'</td>
                     <td>'.$item['userName'].'</td>
                     <td>'.$item['nameNews'].'</td>
-                    <td>'.$item['key_word'].'</td>
-                    <td>'.$formatDate.'</td>
+                    <td class="mobile__item">'.$item['key_word'].'</td>
+                    <td class="mobile__item">'.$formatDate.'</td>
                     <td>
-                        <form action="" method="post" class="newsForm">
+                        <form action="" method="post" class="newsForm mobile_nowrap">
                             <input type="text" name="ID" style="display: none;" value='.$item['ID'].' readonly>
                             <input type="submit" class="btn btn-erorr rounded btn-sizeL colorWhite" name="newsDelete" value="Xóa Bài" onclick="return Click(this)">
-                            <a href="?status=News_management&act=update&id='.$item['ID'].'" class="btn btn-infor rounded btn-a-sizeL colorWhite" name="newsUpDate">Sửa Bài</a>
+                            <a href="?status=News_management&act=update&id='.$item['ID'].'" class="btn btn-infor rounded btn-a-sizeL colorWhite mobileMTop-10" name="newsUpDate">Sửa Bài</a>
                         </form>
                     </td>
                 </tr>

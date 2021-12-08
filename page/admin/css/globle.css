@@ -45,6 +45,11 @@ h2 {
     font-size: 40px;
 }
 
+select,
+input {
+    background-color: transparent;
+}
+
 p {
     font-size: 16px;
     line-height: 1px;
@@ -195,4 +200,72 @@ select:focus {
 
 .txtCenter {
     text-align: center;
+}
+
+
+@media screen  and (max-width: 758px){
+    h2 {
+        font-size: 30px;
+    }
+
+    .mobile-app {
+        flex-direction: column;
+    }
+
+    .mobile__width100 {
+        width: 100%;
+    }
+    .form-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mobile__item {
+        display: none;
+    }
+
+    .mobile_nowrap {
+        white-space: normal !important;
+    }
+
+    .mobile_nowrap:nth-child(0) {
+        margin-bottom: 4px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .add_table-left,.add_table-right {
+        border: none;
+    }
+
+    .form-group > input {
+        width: 100% !important;
+        border: 1px solid #333;
+    }
+
+    .mobileMG {
+        margin: 0 !important;
+    }
+
+    .mbMR-left10 {
+        margin-left: 10px !important;
+    }
+
+    .add_table-right {
+        border-top: 1px solid #333;
+    }
+
+    .mobileMTop-10 {
+        margin-top: 10px;
+    }
+
+    .mbWidth100 {
+        width: 100px !important;
+    }
+
+    .profile__infor {
+        padding-top: 0;
+    }
 }

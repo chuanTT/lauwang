@@ -108,12 +108,12 @@
             <a href="?status=Menu_management" class="colorWhite">Hiện Thị Thực Đơn</a>
         </button>
     </div>
-    <div class="news-group dflexCenter margin-bottom-20">
+    <div class="news-group dflexCenter margin-bottom-20 mobile-app">
         <div class="form-group news">
             <span>Tên</span>
             <input type="text" name="Name" placeholder=" " value="<?=isset($Name)?$Name:false?>">
         </div>
-        <div class="form-group news" style="margin-left: 40px;">
+        <div class="form-group news mobileMG" style="margin-left: 40px;">
             <span>Giá</span>
             <input type="text" name="Price" placeholder=" " value="<?=isset($Price)?$Price:false?>">
         </div>

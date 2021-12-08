@@ -14,8 +14,6 @@
         $status = 'Desk_Manager';
     }
 
-    
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +37,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <title>Quản trị website</title>
 </head>
+
 <body>
     <!-- phần header -->
     <?php require "./includes/header.php"?>
@@ -46,7 +45,7 @@
 
     <!-- Nột dung trang web -->
     <div class="margin-top-150"></div>
-    <div class="container" style="padding-bottom: 50px;">
+    <div class="container mobile__container" style="padding-bottom: 50px;">
     <?php 
         switch($status):
             case "Menu_management":

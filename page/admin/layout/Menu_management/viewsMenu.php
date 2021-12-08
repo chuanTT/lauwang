@@ -32,7 +32,7 @@
             <th>Hình ảnh</th>
             <th>Tên</th>
             <th>Giá</th>
-            <th>Mô tả</th>
+            <th class="mobile__item">Mô tả</th>
         </tr>
         <?php
             $sql = "SELECT * FROM thucdon";
@@ -43,7 +43,7 @@
                         <td style="width: 200px;"><img src="'.BASEURL.''.$item['image'].'" alt="" width="200px"></td>
                         <td>'.$item['Ten'].'</td>
                         <td>'.$item['gia'].'K</td>
-                        <td>'.$item['MoTa'].'</td>
+                        <td class="mobile__item">'.$item['MoTa'].'</td>
                         <td style="white-space: nowrap; width: 200px;">
                             <form action="" method="post">
                                 <input type="text" name="ID" style="display: none;" value='.$item['Ma'].' readonly>

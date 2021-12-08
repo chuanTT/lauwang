@@ -1,22 +1,28 @@
 <?php
+    $susses = false;
     // require "../connect/views.php";
-    if(isset($_POST['btn-submit'])) {
-        $fullName = $_POST['fullname'];
-        $phoneNumber = $_POST['phone-number'];
-        $date = $_POST['date'];
-        $time = $_POST['time'];
-        $location = $_POST['location'];
-        $numAdult = $_POST['adult'];
-        $numChild = $_POST['child'];
-        $note = $_POST['note'];
+    if(isset($_POST['fullname'])) {
+        $fullName = getPost('fullname');
+        $phoneNumber = getPost('phone-number');
+        $date = getPost('date');
+        $time = getPost('time');
+        $location = getPost('location');
+        $numAdult = getPost('adult');
+        $numChild = getPost('child');
+        $note = getPost('note');
+
 
         // check xem bài full ko
 
         // thêm dữ liệu
         $stringInsertOrderTemp = "INSERT INTO order_temp VALUES(NULL,'$fullName', '$phoneNumber', '$date', '$time', '$location', '$numAdult', '$numChild', '$note')";
         $result = connect($stringInsertOrderTemp);
+        if($result == true) {
+            $susses = true;
+        }
     }
 ?>
+
 
 <div class="container__option">
     <div class="story__head">
@@ -107,7 +113,7 @@
                         </div>
                     </div>
                     <div class="form__feild-wrap-submit">
-                        <input type="submit" name="btn-submit" value="Đặt Bàn" class="form-order__submit" onclick="Valid_check()">
+                        <input type="submit" name="btn-submit" value="Đặt Bàn" class="form-order__submit">
                     </div>
                 </div>
             </form>
@@ -117,3 +123,13 @@
 
     <div class="margin-top-40"></div>
 </div>
+<?php 
+    if($susses) {?>
+    <div class="overlay">
+        <div class="overlay__messager">
+            <h2>Đặt bàn thành công!<br> Nhân viên bên tôi sẽ mau chóng phản hồi</h2>
+            <button class="btn" onclick="ClickEnd(this)" style="padding: 11px 47px;background-color: aliceblue; border-radius: 10px;">OK</button>
+        </div>
+    </div>
+<?php }
+?>

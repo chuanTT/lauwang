@@ -7,6 +7,7 @@
                 // lấy ra bảng order
                 $sql = "SELECT * FROM order_temp WHERE ma=$Order";
                 $result = renderViews($sql,true);
+
                 if(isset($_POST['add'])) {
                     if($result !=null) {
                         // lấy dữ liệu từ bảng order_temp
@@ -24,7 +25,7 @@
                         connect($sql);
         
                         // UPDATE Trạng thái của bàn
-                        $sql = "UPDATE `ban` SET `TinhTrang` = '1' WHERE `ban`.`MaBan` = $table";
+                        $sql = "UPDATE `ban` SET `TinhTrang` = b'1' WHERE `ban`.`MaBan` = $table";
                         connect($sql);
                     }
                 }
@@ -42,14 +43,14 @@
     <form method="post">
         <table id="contain-data" border=1>
             <tr>
-                <th>Mã</th>
+                <th class='mobile__item'>Mã</th>
                 <th>Họ tên</th>
                 <th>Số điện thoại</th>
                 <th>Ngày</th>
-                <th>Giờ</th>
+                <th class='mobile__item'>Giờ</th>
                 <th>Cơ Sở</th>
                 <th>Số người lớn</th>
-                <th>Số trẻ em</th>
+                <th class='mobile__item'>Số trẻ em</th>
                 <th>Nhập mã bàn</th>
             </tr>
             <?php
@@ -79,22 +80,22 @@
                         echo "
                         <tr>
                             <form  method='post'>
-                                <td class='order'>
+                                <td class='order mobile__item'>
                                     <input  type='text' value='".$item['ma']."' name='Order' readonly>
                                 </td>
                                 <td>" . $item['ho_ten'] . "</td>
                                 <td>" . $item['sdt'] . "</td>
                                 <td>" . $item['ngay'] . "</td>
-                                <td>" . $item['gio'] . "</td>
+                                <td class='mobile__item'>" . $item['gio'] . "</td>
                                 <td value='$maCoSo'>" . $item['DiaChi'] . "</td>
                                 <td>" . $item['num_adult'] . "</td>
-                                <td>" . $item['num_child'] . "</td>
+                                <td class='mobile__item'>" . $item['num_child'] . "</td>
                                 <td>
                                     <select name='table'>
                                         $table
                                     </select>
                                 </td>
-                                <td style='white-space: nowrap;'>
+                                <td class='mobile_nowrap' style='white-space: nowrap;'>
                                     <input type='submit'  class='btn btn-success btn-sizeL rounded colorWhite' id='btn-add' value='Duyệt' name='add' onclick='return Click(this)'>
                                     <input type='submit' class='btn btn-erorr btn-sizeL rounded colorWhite' id='btn-delete' value='Huỷ' name='delete' onclick='return Click(this)'>
                                 </td>

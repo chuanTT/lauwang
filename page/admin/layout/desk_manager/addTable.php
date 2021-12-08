@@ -18,7 +18,7 @@
     }
 ?>
 
-<div class="add__table dflex">
+<div class="add__table dflex mobile-app">
     <div class="add_table-left">
         <div class="heading dflexCenter margin-bottom-20">
             <h2>Thêm Bàn</h2>
@@ -63,7 +63,7 @@
     <div class="add_table-right">
         <div class="heading dflexCenter margin-bottom-20">
             <h2>Thêm Cơ Sở</h2>
-            <button class="btn btn-success rounded btn-sizeL" style="font-size: 15px;">
+            <button class="btn btn-success rounded btn-sizeL mobile__item" style="font-size: 15px;">
                 <a href="?status=desk_manager" class="colorWhite">Hiển Thị</a>
             </button>
         </div>

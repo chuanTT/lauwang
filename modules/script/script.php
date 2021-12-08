@@ -45,42 +45,41 @@
     checkValid();
 
     //thêm lớp phủ khi thêm bàn thành công 
-    function Valid_check () {
-        const $$ = document.querySelectorAll.bind(document);
-        const $ = document.querySelector.bind(document);
-        // tất cả các element
-        let NameInput = $$('.form__field-input');
-        let indexElement = NameInput.length;
-        let Note = $('.form__note');
-        let arrayValue = [];
+    // function Valid_check () {
+    //     const $$ = document.querySelectorAll.bind(document);
+    //     const $ = document.querySelector.bind(document);
+    //     // tất cả các element
+    //     let NameInput = $$('.form__field-input');
+    //     let indexElement = NameInput.length;
+    //     let Note = $('.form__note');
+    //     let arrayValue = [];
 
-        for(let i=0;i<indexElement;i++) {
-            if(NameInput[i].value != "") {
-                arrayValue.push(NameInput[i].value)
-            } else {
-                break;
-            }
-        }
+    //     for(let i=0;i<indexElement;i++) {
+    //         if(NameInput[i].value != "") {
+    //             arrayValue.push(NameInput[i].value)
+    //         } else {
+    //             break;
+    //         }
+    //     }
 
-        if(arrayValue.length === indexElement) {
-            createElementNode('div','overlay',$('Body'));
-            if($('.overlay')) {
-                $('.overlay').innerHTML = 
-                `
-                    <div class="overlay">
-                        <div class="overlay__messager">
-                            <h2>Đặt bàn thành công!<br> Nhân viên bên tôi sẽ mau chóng phản hồi</h2>
-                            <button class="btn" onclick="ClickEnd(this)" style="padding: 11px 47px;background-color: aliceblue; border-radius: 10px;">OK</button>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-    }
+    //     if(arrayValue.length === indexElement) {
+    //         createElementNode('div','overlay',$('Body'));
+    //         if($('.overlay')) {
+    //             $('.overlay').innerHTML = 
+    //             `
+    //                 <div class="overlay">
+    //                     <div class="overlay__messager">
+    //                         <h2>Đặt bàn thành công!<br> Nhân viên bên tôi sẽ mau chóng phản hồi</h2>
+    //                         <button class="btn" onclick="ClickEnd(this)" style="padding: 11px 47px;background-color: aliceblue; border-radius: 10px;">OK</button>
+    //                     </div>
+    //                 </div>
+    //             `;
+    //         }
+    //     }
+    // }
     
     function ClickEnd (event) {
         jQuery('.overlay').remove();
-        return true;
     }
     function Parent(element,select) {
         while(element.parentElement) {

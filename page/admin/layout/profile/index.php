@@ -69,23 +69,23 @@
             <div class="profile__infor">
                 <div class="form_group">
                     <span>Họ và Tên: </span>
-                    <input type="text" name="fullname" value="<?=$result['HoTen']?>" <?=!$hidden==true?'readonly':false?>>
+                    <input class="mobileMTop-10" type="text" name="fullname" value="<?=$result['HoTen']?>" <?=!$hidden==true?'readonly':false?>>
                 </div>
                 <div class="form_group">
                     <span>Ngày Sinh: </span>
-                    <input type="date" name="Birtday" value="<?=$result['NgaySinh']?>" <?=!$hidden==true?'readonly':false?>>
+                    <input class="mobileMTop-10" type="date" name="Birtday" value="<?=$result['NgaySinh']?>" <?=!$hidden==true?'readonly':false?>>
                 </div>
                 <div class="form_group">
                     <span>Số Điện Thoại: </span>
-                    <input type="text" name="phone" value="<?=$result['SDT']?>" <?=!$hidden==true?'readonly':false?>>
+                    <input class="mobileMTop-10" type="text" name="phone" value="<?=$result['SDT']?>" <?=!$hidden==true?'readonly':false?>>
                 </div>
-                <div class="form_group">
+                <div class="form_group dflex mobile-app">
                     <span>Chức Vụ: </span>
-                    <span class="position"><?=$result['nameRole']?></span>
+                    <span class="position mobileMTop-10"><?=$result['nameRole']?></span>
                 </div>
                 <div class="form_group">
                     <span>Địa Chỉ: </span>
-                    <input type="text" name="address" value="<?=$result['DiaChi']?>" <?=!$hidden==true?'readonly':false?>>
+                    <input  class="mobileMTop-10" type="text" name="address" value="<?=$result['DiaChi']?>" <?=!$hidden==true?'readonly':false?>>
                 </div>
                 <?php if($hidden == true):?>
                     <div class="updateP mgTop-40">
