@@ -42,9 +42,11 @@
                         unlink(BASEURL.$old_picture);
                     }
                 }
+                unset($_POST);
             }
         }
         header('refresh: 0');
+        exit;
     }
 
 ?>
