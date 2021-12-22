@@ -112,6 +112,7 @@
             $result = renderViews($sql);
             
              var_dump($result);
+                echo $sql;
           
             if($result != null):?>
                 <div class="story__head">
