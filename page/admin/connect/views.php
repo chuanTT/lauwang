@@ -39,6 +39,8 @@
                 $data[] = $item;
             }
         }
+        
+        var_dump($result);
 
         $conn->close();
 
