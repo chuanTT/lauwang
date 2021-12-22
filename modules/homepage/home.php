@@ -110,6 +110,8 @@
             <?php
             $sql = "SELECT * FROM thucdon ORDER BY thucdon.Ma DESC LIMIT 3";
             $result = renderViews($sql);
+            
+             var_dump($result);
           
             if($result != null):?>
                 <div class="story__head">
