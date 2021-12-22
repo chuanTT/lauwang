@@ -12,6 +12,7 @@
         $result =  $conn->query($sql);
         if($result == true) {
             $susses = true;
+            var_dump("Thành công");
         } else {
             $susses = false;
         }
