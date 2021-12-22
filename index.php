@@ -1,7 +1,9 @@
 <?php
 // connect database
 require_once "./page/admin/unitity/handel.php";
-require "./page/admin/connect/views.php";
+require_once "./page/admin/connect/views.php";
+
+echo "Chuân";
 
 if (empty($_GET['action'])) :
     $action = 'home';
