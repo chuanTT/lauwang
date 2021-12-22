@@ -67,7 +67,5 @@
     function convertMD5 ($pwd) {
         return md5(md5($pwd).key);
     }
-
-echo "Thành công";
     
 
