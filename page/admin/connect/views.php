@@ -12,7 +12,6 @@
         $result =  $conn->query($sql);
         if($result == true) {
             $susses = true;
-            echo "Thành công";
         } else {
             $susses = false;
         }
@@ -68,7 +67,5 @@
     function convertMD5 ($pwd) {
         return md5(md5($pwd).key);
     }
-
-echo "Kết nối thành công";
     
 
